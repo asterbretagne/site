@@ -1,7 +1,135 @@
 @import "normalize";
+@import "bourbon";
+@import "neat";
 
 @include normalize();
 
+$modular-scale-ratio: $perfect-fourth;
+$modular-scale-base: 1.2em;
+
+$color-default: black;
+$color-default-bg: white;
+$color-bg-green: rgba(0,255,0,1);
+
 body {
   font-family: 'Roboto Mono', monospace;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  position: relative;
+}
+
+$layout-grid-small: (
+  columns: 1,
+  gutter: 0,
+  media: "(max-width: 875px)",
+);
+
+$layout-grid-wide: (
+  columns: 12,
+  gutter: 20px,
+  media: "(min-width: 876px)",
+);
+$nav-grid-wide: (
+  columns: 5,
+  gutter: 40px,
+);
+
+.header {
+  margin-bottom: modular-scale(3);
+}
+
+.logo {
+  @include grid-media($layout-grid-small) {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  @include grid-media($layout-grid-wide) {
+    margin: 2rem 0 modular-scale(5) 2.1rem;
+  }
+}
+
+
+
+.navbar {
+  
+  @include grid-container;
+  
+  @include grid-media($layout-grid-wide) {
+    @include grid-push(1, $layout-grid-wide);
+  }
+  &__item {
+    display: block;
+    @include grid-column(1, $layout-grid-small);
+
+    @include grid-media($layout-grid-wide) {
+      @include grid-column(1, $nav-grid-wide);
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-default;
+    @include grid-media($layout-grid-small) {
+      width: calc(100% - 20px);
+      left: -20px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+  }
+  &__link span {
+    display: block;
+    width: 3ex;
+    transition: width 0.3s ease;
+    border-bottom: 2px solid $color-default;
+    @include grid-media($layout-grid-small) {
+      display: inline;
+      text-align: center;
+      border-bottom: 1px dotted $color-default;
+    }
+  }
+
+  &__link:hover span, &__link--selected span {
+    width: 100%;
+    @include grid-media($layout-grid-small) {
+      border-bottom: 3px solid $color-default;
+    }
+
+  }
+
+}
+
+.container {
+  @include grid-container;
+  background: linear-gradient(to bottom, $color-bg-green 0%, $color-default-bg 65%);
+  &--yellow {
+  }
+
+  &--main {
+    min-height: 50rem;
+  }
+  &--footer {
+    min-height: 10rem;
+  }
+
+  &__section {
+    @include grid-push(1 of 12, $layout-grid-wide);
+    padding-top: modular-scale(3);
+
+  }
+}
+
+.footer__block {
+  @include grid-column(4, $layout-grid-wide);
+  border: 1px solid pink;
 }

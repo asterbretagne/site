@@ -1,10 +1,12 @@
 "use strict";
 
-var gulp, sass, bourbon, neat, browserSync, minify, 
+var gulp, sass, postcss, autoprefixer, bourbon, neat, browserSync, minify, 
     js_src, js_dist;
 
 gulp        = require("gulp");
 sass        = require("gulp-sass");
+postcss     = require("gulp-postcss");
+autoprefixer= require("autoprefixer");
 bourbon     = require("node-bourbon");
 neat        = require("node-neat").includePaths;
 browserSync = require("browser-sync");
@@ -13,13 +15,16 @@ minify      = require('gulp-minify');
 js_src  = './src/assets/js';
 js_dist = './dist/assets/js';
 
+// console.log([].concat("node_modules/normalize-scss/sass", bourbon.includePaths, neat));
+
 
 // Compile SASS files
 gulp.task("sass", function() {
   gulp.src("src/assets/css/**/*.scss")
       .pipe(sass({
-        includePaths: [].concat("node_modules/normalize-scss/sass", neat)
+        includePaths: [].concat("node_modules/normalize-scss/sass", bourbon.includePaths, neat)
       }))
+      .pipe(postcss([ autoprefixer() ]))
       .pipe(gulp.dest("dist/assets/css"))
       .pipe(browserSync.reload({
         stream: true
@@ -61,7 +66,8 @@ gulp.task("browserSync", function() {
   browserSync({
     server: {
       baseDir: "./dist"
-    }
+    },
+    browser: "chromium"
   })
 });
 
