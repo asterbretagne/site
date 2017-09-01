@@ -154,36 +154,47 @@ blockquote {
 
 .footer {
   @include grid-container;
-  min-height: 20em;
+  min-height: 25em;
   &--green {
     background: linear-gradient(to bottom, $color-green 0%, $color-white 100%);
   }
 }
 .footer__section {
-  @include grid-push(1, $layout-grid-wide);
+  @include grid-media($layout-grid-wide) {
+    @include grid-push(1, $layout-grid-wide);
+  }
+  @include grid-media($layout-grid-small) {
+    text-align: center;
+  }
 }
 .footer__block {
-  @include grid-column(4, $layout-grid-wide);
-  margin-top: modular-scale(3);
-  & ul {
-    padding: 0;
+  & ul { padding: 0; }
+  & h1 { text-transform: none }
+  @include grid-media($layout-grid-wide) {
+    margin-top: modular-scale(3);
+    @include grid-column(4, $layout-grid-wide);
+    &--small {
+        @include grid-column(3, $layout-grid-wide);
+    }
+    &--center {
+      margin-top: modular-scale(5);
+      text-align: center;
+      vertical-align: center;
+    }
   }
-  &--small {
-    @include grid-column(3, $layout-grid-wide);
-  }
-  &--center {
-    text-align: center;
-    vertical-align: center;
+  @include grid-media($layout-grid-small) {
+    border-top: 1px solid $color-white;
   }
 }
 
-.u-bt {
-  display: inline-block;
-  padding: 0 1em;
-  font-family: "Roboto", sans-serif;
-  font-size: $font-size-m;
-  line-height: 2;
-  font-weight: $font-weight-bold;
-  text-decoration: none;
-  border: 3px solid $color-black;
+.footer__menu {
+  @include grid-media($layout-grid-small) {
+    margin-left: 0;
+    & > li { text-indent: 0; }
+    & > li:before {
+      content: "";
+      text-indent: 0;
+    }
+  }
 }
+

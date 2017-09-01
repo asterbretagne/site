@@ -23,3 +23,18 @@
 // .u-font-weight-bold
 // .u-font-weight-bolder
 
+.u-bt {
+  display: inline-block;
+  padding: 0 1em;
+  font-family: "Roboto", sans-serif;
+  font-size: $font-size-m;
+  line-height: 2;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  border: 3px solid $color-black;
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+

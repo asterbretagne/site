@@ -791,6 +791,19 @@ template {
 .u-font-weight--bolder {
   font-weight: 900; }
 
+.u-bt {
+  display: inline-block;
+  padding: 0 1em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  line-height: 2;
+  font-weight: 500;
+  text-decoration: none;
+  border: 3px solid black; }
+  .u-bt:hover {
+    background-color: black;
+    color: white; }
+
 /*================== BASE =============================*/
 html {
   -webkit-box-sizing: border-box;
@@ -913,7 +926,7 @@ blockquote {
     text-indent: 2ex; }
 
 .footer {
-  min-height: 20em; }
+  min-height: 25em; }
   .footer::after {
     clear: both;
     content: "";
@@ -922,30 +935,44 @@ blockquote {
     background: -webkit-gradient(linear, left top, left bottom, from(lime), to(white));
     background: linear-gradient(to bottom, lime 0%, white 100%); }
 
-.footer__section {
-  margin-left: calc(8.33333% - 21.66667px + 40px); }
+@media (min-width: 676px) {
+  .footer__section {
+    margin-left: calc(8.33333% - 21.66667px + 40px); } }
 
-.footer__block {
-  width: calc(33.33333% - 26.66667px);
-  float: left;
-  margin-left: 20px;
-  margin-top: 2.84231em; }
-  .footer__block ul {
-    padding: 0; }
-  .footer__block--small {
-    width: calc(25% - 25px);
+@media (max-width: 675px) {
+  .footer__section {
+    text-align: center; } }
+
+.footer__block ul {
+  padding: 0; }
+
+.footer__block h1 {
+  text-transform: none; }
+
+@media (min-width: 676px) {
+  .footer__block {
+    margin-top: 2.84231em;
+    width: calc(33.33333% - 26.66667px);
     float: left;
     margin-left: 20px; }
-  .footer__block--center {
-    text-align: center;
-    vertical-align: center; }
+    .footer__block--small {
+      width: calc(25% - 25px);
+      float: left;
+      margin-left: 20px; }
+    .footer__block--center {
+      margin-top: 5.05047em;
+      text-align: center;
+      vertical-align: center; } }
 
-.u-bt {
-  display: inline-block;
-  padding: 0 1em;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2em;
-  line-height: 2;
-  font-weight: 500;
-  text-decoration: none;
-  border: 3px solid black; }
+@media (max-width: 675px) {
+  .footer__block {
+    border-top: 1px solid white; } }
+
+@media (max-width: 675px) {
+  .footer__menu {
+    margin-left: 0; }
+    .footer__menu > li {
+      text-indent: 0; }
+    .footer__menu > li:before {
+      content: "";
+      text-indent: 0; } }
