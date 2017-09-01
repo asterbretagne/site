@@ -5,16 +5,54 @@
 @include normalize();
 
 @import "variables";
+@import "fonts";
 @import "utils";
 
-a, a:hover, a:link { color: $color-black; }
+/*================== BASE =============================*/
+html {
+  box-sizing: border-box;
+  font-size: 87.5%; // 14px
+}
 
-/*================== LAYOUT ==========================*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
-  font-size: 87.5%; // 14px
-  font-weight: map-get($font-weights, light);
+  font-weight: $font-weight-light;
 }
+
+// Elements
+a, a:hover, a:link { color: $color-black; }
+a:hover {
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $font-weight-normal;
+}
+
+h1 {
+  font-size: $font-size-xl;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: $font-size-l;
+}
+
+blockquote {
+  margin-left: 0;
+  font-style: italic;
+}
+
+
+/*================== LAYOUT ==========================*/
 
 .wrapper {
   position: relative;
@@ -99,6 +137,16 @@ body {
     @include grid-push(1 of 12, $layout-grid-wide);
     padding-top: modular-scale(3);
 
+  }
+}
+.container--main {
+  & ul {
+    list-style-type: none;
+    & > li { text-indent: -2.3ex; }
+    & > li:before {
+      content: "— ";
+      text-indent: 2ex;
+    }
   }
 }
 
