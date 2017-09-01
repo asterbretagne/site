@@ -795,7 +795,8 @@ template {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 87.5%; }
+  font-size: 87.5%;
+  line-height: 1.4; }
 
 *,
 *::before,
