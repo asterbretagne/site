@@ -120,6 +120,8 @@ blockquote {
 
 }
 
+
+
 .container {
   @include grid-container;
   background: linear-gradient(to bottom, $color-green 0%, $color-white 65%);
@@ -139,18 +141,48 @@ blockquote {
 
   }
 }
-.container--main {
-  & ul {
-    list-style-type: none;
-    & > li { text-indent: -2.3ex; }
-    & > li:before {
-      content: "— ";
-      text-indent: 2ex;
-    }
+.container ul, .u-list--dashed {
+  list-style-type: none;
+  margin-left: 2ex;
+  & > li { text-indent: -2.3ex; }
+  & > li:before {
+    content: "— ";
+    text-indent: 2ex;
   }
 }
 
+.footer {
+  @include grid-container;
+  min-height: 20em;
+  &--green {
+    background: linear-gradient(to bottom, $color-green 0%, $color-white 100%);
+  }
+}
+.footer__section {
+  @include grid-push(1, $layout-grid-wide);
+}
 .footer__block {
   @include grid-column(4, $layout-grid-wide);
-  border: 1px solid pink;
+  margin-top: modular-scale(3);
+  & ul {
+    padding: 0;
+  }
+  &--small {
+    @include grid-column(3, $layout-grid-wide);
+  }
+  &--center {
+    text-align: center;
+    vertical-align: center;
+  }
+}
+
+.u-bt {
+  display: inline-block;
+  padding: 0 1em;
+  font-family: "Roboto", sans-serif;
+  font-size: $font-size-m;
+  line-height: 2;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  border: 3px solid $color-black;
 }
