@@ -95,7 +95,7 @@ blockquote {
   &__item {
     display: block;
     float: left;
-    margin-right: 20px;
+    margin-right: 30px;
     @include grid-media($layout-grid-small) {
       float: none;
       text-align: center;
@@ -132,14 +132,11 @@ blockquote {
   &--main {
     min-height: 50rem;
   }
-  &--footer {
-    min-height: 10rem;
-  }
 
   &__section {
-    @include grid-push(1 of 12, $layout-grid-wide);
+    @include grid-column(7, $layout-grid-wide);
+    @include grid-push(3 of 12, $layout-grid-wide);
     padding-top: modular-scale(3);
-
   }
 }
 .container ul, .u-list--dashed {
