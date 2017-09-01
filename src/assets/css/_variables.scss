@@ -1,0 +1,51 @@
+
+/*================= VARIABLES =========================*/
+
+// COLORS
+$color-black   : black;
+$color-white   : white;
+$color-green   : rgba(0,255,0,1);
+$color-cyan    : rgba(0,255,255,1);
+$color-yellow  : rgba(251,184,18,1);
+$color-magenta : rgba(237,108,165,1);
+
+$flashy-backgrounds: (
+  green   : $color-green,
+  cyan    : $color-cyan,
+  yellow  : $color-yellow,
+  magenta : $color-magenta,
+);
+
+// SIZES
+$modular-scale-ratio: $perfect-fourth;
+$modular-scale-base: 1.2em;
+
+$font-sizes: (
+    xxs: modular-scale(-3),
+    xs:  modular-scale(-2),
+    s:   modular-scale(-1),
+    m:   modular-scale(0),
+    l:   modular-scale(1),
+    xl:  modular-scale(2),
+    xxl: modular-scale(3)
+);
+
+$font-weights: (
+    light:  300,
+    normal: 400,
+    bold:   500,
+    bolder: 900
+);
+
+// GRIDS
+$layout-grid-small: (
+  columns: 1,
+  gutter: 0,
+  media: "(max-width: 675px)",
+);
+
+$layout-grid-wide: (
+  columns: 12,
+  gutter: 20px,
+  media: "(min-width: 676px)",
+);

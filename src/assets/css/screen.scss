@@ -4,55 +4,22 @@
 
 @include normalize();
 
-/*================= VARIABLES =========================*/
-$modular-scale-ratio: $perfect-fourth;
-$modular-scale-base: 1.2em;
-
-$color-default: black;
-$color-default-bg: white;
-$color-bg-green: rgba(0,255,0,1);
-
-$layout-grid-small: (
-  columns: 1,
-  gutter: 0,
-  media: "(max-width: 675px)",
-);
-
-$layout-grid-wide: (
-  columns: 12,
-  gutter: 20px,
-  media: "(min-width: 676px)",
-);
-$nav-grid-wide: (
-  columns: 5,
-  gutter: 40px,
-);
+@import "variables";
 
 /*================== UTILS   ==========================*/
 
-$font-sizes: (
-    xxs: modular-scale(-3),
-    xs:  modular-scale(-2),
-    s:   modular-scale(-1),
-    m:   modular-scale(0),
-    l:   modular-scale(1),
-    xl:  modular-scale(2),
-    xxl: modular-scale(3)
-);
 
 @each $name, $value in $font-sizes {
   .u-font-size--#{$name} { font-size: $value; }
 };
-
-$font-weights: (
-    light:  300,
-    normal: 400,
-    bold:   500,
-    bolder: 900
-);
+// Usage: 
+// .u-font-size--xxs
+//
 @each $name, $value in $font-weights {
   .u-font-weight--#{$name} { font-weight: $value; }
 };
+
+a, a:hover, a:link { color: $color-black; }
 
 /*================== LAYOUT ==========================*/
 body {
@@ -112,13 +79,12 @@ body {
     height: 2rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: $color-default;
   }
   &__link span {
     display: block;
     width: 2.5ex;
     transition: width 0.3s ease;
-    border-bottom: 2px solid $color-default;
+    border-bottom: 2px solid $color-black;
     @include grid-media($layout-grid-small) { margin: 0 auto; }
   }
 
@@ -130,7 +96,7 @@ body {
 
 .container {
   @include grid-container;
-  background: linear-gradient(to bottom, $color-bg-green 0%, $color-default-bg 65%);
+  background: linear-gradient(to bottom, $color-green 0%, $color-white 65%);
   &--yellow {
   }
 
