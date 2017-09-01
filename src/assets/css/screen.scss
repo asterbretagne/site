@@ -14,10 +14,23 @@
 };
 // Usage: 
 // .u-font-size--xxs
-//
+// .u-font-size--xs
+// .u-font-size--s
+// .u-font-size--m
+// .u-font-size--l
+// .u-font-size--xl
+// .u-font-size--xxl
+
 @each $name, $value in $font-weights {
   .u-font-weight--#{$name} { font-weight: $value; }
 };
+// Usage:
+// .u-font-weight-light
+// .u-font-weight-normal
+// .u-font-weight-bold
+// .u-font-weight-bolder
+
+
 
 a, a:hover, a:link { color: $color-black; }
 
