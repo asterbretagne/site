@@ -4,23 +4,13 @@
 
 @include normalize();
 
+/*================= VARIABLES =========================*/
 $modular-scale-ratio: $perfect-fourth;
 $modular-scale-base: 1.2em;
 
 $color-default: black;
 $color-default-bg: white;
 $color-bg-green: rgba(0,255,0,1);
-
-body {
-  font-family: 'Roboto Mono', monospace;
-}
-
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-  position: relative;
-}
 
 $layout-grid-small: (
   columns: 1,
@@ -37,6 +27,47 @@ $nav-grid-wide: (
   columns: 5,
   gutter: 40px,
 );
+
+/*================== UTILS   ==========================*/
+
+$font-sizes: (
+    xxs: modular-scale(-3),
+    xs:  modular-scale(-2),
+    s:   modular-scale(-1),
+    m:   modular-scale(0),
+    l:   modular-scale(1),
+    xl:  modular-scale(2),
+    xxl: modular-scale(3)
+);
+
+@each $name, $value in $font-sizes {
+  .u-font-size--#{$name} { font-size: $value; }
+};
+
+$font-weights: (
+    light:  300,
+    normal: 400,
+    bold:   500,
+    bolder: 900
+);
+@each $name, $value in $font-weights {
+  .u-font-weight--#{$name} { font-weight: $value; }
+};
+
+/*================== LAYOUT ==========================*/
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 87.5%; // 14px
+  font-weight: map-get($font-weights, light);
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  position: relative;
+}
+
 
 .header {
   margin-bottom: modular-scale(3);
@@ -63,6 +94,10 @@ $nav-grid-wide: (
   @include grid-media($layout-grid-wide) {
     @include grid-push(1, $layout-grid-wide);
   }
+
+
+  font-weight: map-get($font-weights, normal);
+
   &__item {
     display: block;
     @include grid-column(1, $layout-grid-small);
