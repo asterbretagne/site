@@ -1,6 +1,6 @@
 "use strict";
 
-var gulp, sass, postcss, autoprefixer, bourbon, neat, browserSync, minify, 
+var gulp, sass, postcss, autoprefixer, bourbon, neat, browserSync, imagemin, minify, 
     js_src, js_dist;
 
 gulp        = require("gulp");
@@ -10,6 +10,7 @@ autoprefixer= require("autoprefixer");
 bourbon     = require("node-bourbon");
 neat        = require("node-neat").includePaths;
 browserSync = require("browser-sync");
+imagemin    = require("gulp-imagemin");
 minify      = require('gulp-minify');
 
 js_src  = './src/assets/js';
@@ -34,6 +35,7 @@ gulp.task("sass", function() {
 // Prepare image assets
 gulp.task("img", function() {
   gulp.src("src/assets/img/**/*.*")
+      .pipe(imagemin())
       .pipe(gulp.dest("dist/assets/img"))
 });
 
