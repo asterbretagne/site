@@ -930,6 +930,20 @@ blockquote {
         float: left;
         margin-left: 20px; } }
 
+.container img {
+  width: 100%;
+  margin-bottom: 1.5996em; }
+  @media (min-width: 900px) {
+    .container img {
+      margin-left: -20px;
+      margin-right: -20px;
+      width: calc(100% + 40px);
+      width: calc(166.66667% - 53.33333px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(-33.33333% - 13.33333px + 40px);
+      margin-left: calc(-33.33333% - 13.33333px + 67px); } }
+
 .container ul, .u-list--dashed {
   list-style-type: none;
   margin-left: 2ex; }

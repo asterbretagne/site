@@ -148,6 +148,16 @@ blockquote {
     padding-top: modular-scale(3);
   }
 }
+.container img {
+  width: 100%;
+  @include grid-media($content-grid-wide) {
+    @include grid-collapse;
+    @include grid-column(20, $content-grid-wide);
+    @include grid-push(-4, $content-grid-wide);
+    margin-left: calc(-33.33333% - 13.33333px + 67px);
+  }
+  margin-bottom: modular-scale(1);
+}
 .container ul, .u-list--dashed {
   list-style-type: none;
   margin-left: 2ex;
