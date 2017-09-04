@@ -134,8 +134,17 @@ blockquote {
   }
 
   &__section {
-    @include grid-column(7, $layout-grid-wide);
-    @include grid-push(3 of 12, $layout-grid-wide);
+    @include grid-media($content-grid-wide) {
+      @include grid-column(7, $content-grid-wide);
+      @include grid-push(3 of 12, $content-grid-wide);
+    }
+    @include grid-media($content-grid-medium) {
+      @include grid-column(9, $content-grid-medium);
+      @include grid-push(1 of 12, $content-grid-medium);
+    }
+    @include grid-media($content-grid-small) {
+      @include grid-column(1, $content-grid-small);
+    }
     padding-top: modular-scale(3);
   }
 }
@@ -183,7 +192,6 @@ blockquote {
     border-top: 1px solid $color-white;
   }
 }
-
 .footer__menu {
   @include grid-media($layout-grid-small) {
     margin-left: 0;

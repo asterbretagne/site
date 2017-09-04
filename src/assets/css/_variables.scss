@@ -51,14 +51,31 @@ $font-weights: (
 );
 
 // GRIDS
-$layout-grid-small: (
-  columns: 1,
-  gutter: 0,
-  media: "(max-width: 675px)",
-);
 
 $layout-grid-wide: (
   columns: 12,
   gutter: 20px,
-  media: "(min-width: 676px)",
+  media: "(min-width: 726px)",
+);
+$layout-grid-small: (
+  columns: 1,
+  gutter: 0,
+  media: "(max-width: 725px)",
+);
+
+
+$content-grid-wide: (
+  columns: 12,
+  gutter: 20px,
+  media: "(min-width: 900px)",
+);
+$content-grid-medium: (
+  columns: 12,
+  gutter: 20px,
+  media: "(min-width: 676px) and (max-width: 899px)",
+);
+$content-grid-small: (
+  columns: 1,
+  gutter: 20px,
+  media: "(max-width: 675px)",
 );
