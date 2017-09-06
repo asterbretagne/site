@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp, sass, postcss, autoprefixer, bourbon, neat, browserSync, imagemin, minify, 
-    js_src, js_dist;
+    nunjucksRender, js_src, js_dist;
 
 gulp        = require("gulp");
 sass        = require("gulp-sass");
@@ -12,6 +12,7 @@ neat        = require("node-neat").includePaths;
 browserSync = require("browser-sync");
 imagemin    = require("gulp-imagemin");
 minify      = require('gulp-minify');
+nunjucksRender = require('gulp-nunjucks-render');
 
 js_src  = './src/assets/js';
 js_dist = './dist/assets/js';
@@ -47,8 +48,11 @@ gulp.task('fonts', function() {
 
 // Prepare HTML files
 gulp.task("html", function() {
-  gulp.src("src/**/*.html")
-      .pipe(gulp.dest("dist"))
+  return gulp.src("src/pages/**/*.html")
+             .pipe(nunjucksRender({
+               path: ['src/partials']
+             }))
+             .pipe(gulp.dest("dist"))
 });
 
 // Prepare JS files
