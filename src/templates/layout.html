@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Aster Bretagne, Architectes Sans Territoire.</title>
+    {% import 'macros/page.html' as page %}
+    <title>{{page.title(pages, currentPage)}}</title>
     <link rel="stylesheet" href="assets/css/screen.css">
   </head>
   <body>
@@ -18,16 +19,16 @@
         </div>
         {% include "partials/navigation.html" %}
       </header>
-      <main id="main" role="main" class="container container--main container--{{pages | findbyattr('name', currentPage) | getvalue('color')}}">
+      <main id="main" role="main" class="container container--main container--{{page.color(pages, currentPage)}}">
         {% block content %} {% endblock %}
       </main>
-      <footer id="footer" role="contentinfo" class="footer footer--{{pages | findbyattr('name', currentPage) | getvalue('color')}}">
+      <footer id="footer" role="contentinfo" class="footer footer--{{page.color(pages, currentPage)}}">
         <section class="footer__section">
           <section class="footer__block">
             <h1 class="u-font-size--m">Rubriques</h1>
             <ul class="u-list--dashed footer__menu">
-              {% for page in pages %}
-              <li><a href="{{page.name}}.html">{{page.label | safe}}</a></li>
+              {% for p in pages %}
+              <li><a href="{{page.name}}.html">{{p.label | safe}}</a></li>
               {% endfor %}
             </ul>
           </section>
