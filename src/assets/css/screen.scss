@@ -48,8 +48,11 @@ h2 {
 }
 
 blockquote {
-  margin-left: 0;
+  margin-left: 2ex;
+  text-indent: -2ex;
   font-style: italic;
+  &::before { content: '«'; }
+  &::after { content: '»'; }
 }
 
 

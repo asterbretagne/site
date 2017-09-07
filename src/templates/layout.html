@@ -20,7 +20,11 @@
         {% include "partials/navigation.html" %}
       </header>
       <main id="main" role="main" class="container container--main container--{{page.color(pages, currentPage)}}">
-        {% block content %} {% endblock %}
+        <section class="container__section">
+          <section>
+          {% block content %} {% endblock %}
+          </section>
+        </section>
       </main>
       <footer id="footer" role="contentinfo" class="footer footer--{{page.color(pages, currentPage)}}">
         <section class="footer__section">
