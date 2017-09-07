@@ -1,0 +1,35 @@
+{
+  "pages": [
+    {
+      "name": "index",
+      "label": "Accueil",
+      "color": "green"
+    }, {
+      "name": "nos-actions",
+      "label": "Nos&nbsp;actions",
+      "color": "yellow"
+    }, {
+      "name": "actualites",
+      "label": "Actualités",
+      "color": "magenta"
+    }, {
+      "name": "notre-approche",
+      "label": "Notre&nbsp;approche",
+      "color": "cyan"
+    }, {
+      "name": "l-association",
+      "label": "L'association",
+      "color": "green"
+    }
+  ], "extra-pages": [
+    {
+      "name": "je-participe",
+      "label": "Je participe",
+      "color": "green"
+    }, {
+      "name": "contact",
+      "label": "Contactez-nous",
+      "color": "yellow"
+    }
+  ]
+}

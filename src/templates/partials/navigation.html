@@ -1,0 +1,11 @@
+        <!-- currentPage is {{currentPage}}-->
+        {% import 'macros/navigation.html' as nav %}
+        <nav id="navigation" role="navigation" class="nav">
+          <ul class="navbar u-font-size--m">
+            {% for page in pages %}
+            <li class="navbar__item">
+              <a href="{{page.name}}.html" class="navbar__link {{nav.isSelected(page.name, currentPage)}}">{{page.label | safe}}<span></span></a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>

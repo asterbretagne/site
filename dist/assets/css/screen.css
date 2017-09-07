@@ -908,6 +908,18 @@ blockquote {
     clear: both;
     content: "";
     display: block; }
+  .container--green {
+    background: -webkit-gradient(linear, left top, left bottom, from(lime), color-stop(65%, white));
+    background: linear-gradient(to bottom, lime 0%, white 65%); }
+  .container--cyan {
+    background: -webkit-gradient(linear, left top, left bottom, from(cyan), color-stop(65%, white));
+    background: linear-gradient(to bottom, cyan 0%, white 65%); }
+  .container--yellow {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbb812), color-stop(65%, white));
+    background: linear-gradient(to bottom, #fbb812 0%, white 65%); }
+  .container--magenta {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed6ca5), color-stop(65%, white));
+    background: linear-gradient(to bottom, #ed6ca5 0%, white 65%); }
   .container--main {
     min-height: 50rem; }
   .container__section {
@@ -954,7 +966,9 @@ blockquote {
     text-indent: 2ex; }
 
 .footer {
-  min-height: 25em; }
+  min-height: 25em;
+  background: -webkit-gradient(linear, left top, left bottom, from(lime), to(white));
+  background: linear-gradient(to bottom, lime 0%, white 100%); }
   .footer::after {
     clear: both;
     content: "";
@@ -962,6 +976,15 @@ blockquote {
   .footer--green {
     background: -webkit-gradient(linear, left top, left bottom, from(lime), to(white));
     background: linear-gradient(to bottom, lime 0%, white 100%); }
+  .footer--cyan {
+    background: -webkit-gradient(linear, left top, left bottom, from(cyan), to(white));
+    background: linear-gradient(to bottom, cyan 0%, white 100%); }
+  .footer--yellow {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbb812), to(white));
+    background: linear-gradient(to bottom, #fbb812 0%, white 100%); }
+  .footer--magenta {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed6ca5), to(white));
+    background: linear-gradient(to bottom, #ed6ca5 0%, white 100%); }
 
 @media (min-width: 726px) {
   .footer__section {

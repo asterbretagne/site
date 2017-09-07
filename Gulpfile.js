@@ -1,18 +1,20 @@
 "use strict";
 
 var gulp, sass, postcss, autoprefixer, bourbon, neat, browserSync, imagemin, minify, 
-    nunjucksRender, js_src, js_dist;
+    nunjucksRender, fs, data, js_src, js_dist;
 
-gulp        = require("gulp");
-sass        = require("gulp-sass");
-postcss     = require("gulp-postcss");
-autoprefixer= require("autoprefixer");
-bourbon     = require("node-bourbon");
-neat        = require("node-neat").includePaths;
-browserSync = require("browser-sync");
-imagemin    = require("gulp-imagemin");
-minify      = require('gulp-minify');
+gulp           = require("gulp");
+sass           = require("gulp-sass");
+postcss        = require("gulp-postcss");
+autoprefixer   = require("autoprefixer");
+bourbon        = require("node-bourbon");
+neat           = require("node-neat").includePaths;
+browserSync    = require("browser-sync");
+imagemin       = require("gulp-imagemin");
+minify         = require('gulp-minify');
 nunjucksRender = require('gulp-nunjucks-render');
+fs             = require('fs');
+data           = require('gulp-data');
 
 js_src  = './src/assets/js';
 js_dist = './dist/assets/js';
@@ -47,10 +49,27 @@ gulp.task('fonts', function() {
 });
 
 // Prepare HTML files
+var manageNunjucksEnv = function(environment) {
+  environment.addFilter('shorten', function(str, count) {
+      return str.slice(0, count || 5);
+  });
+  environment.addFilter('findbyattr', function(arr, attr, value) {
+    return arr.find(function(element) {
+              return element[attr] == value;
+            });
+  });
+  environment.addFilter('getvalue', function(obj, attr) {
+    return obj[attr];
+  });
+}
 gulp.task("html", function() {
-  return gulp.src("src/pages/**/*.html")
+  return gulp.src("src/*.html")
+             .pipe(data(function(){
+               return JSON.parse(fs.readFileSync('./src/data.json'));
+             }))
              .pipe(nunjucksRender({
-               path: ['src/partials']
+               path: ['src/templates'],
+               manageEnv: manageNunjucksEnv
              }))
              .pipe(gulp.dest("dist"))
 });

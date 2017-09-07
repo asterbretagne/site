@@ -126,8 +126,16 @@ blockquote {
 .container {
   @include grid-container;
   background: linear-gradient(to bottom, $color-green 0%, $color-white 65%);
-  &--yellow {
+  @each $name, $value in $flashy-backgrounds {
+    &--#{$name} {
+      background: linear-gradient(to bottom, #{$value} 0%, $color-white 65%);
+    }
   }
+  // Usage: 
+  // .container--green
+  // .container--cyan
+  // .container--yellow
+  // .container--magenta
 
   &--main {
     min-height: 50rem;
@@ -171,9 +179,17 @@ blockquote {
 .footer {
   @include grid-container;
   min-height: 25em;
-  &--green {
-    background: linear-gradient(to bottom, $color-green 0%, $color-white 100%);
+  background: linear-gradient(to bottom, $color-green 0%, $color-white 100%);
+  @each $name, $value in $flashy-backgrounds {
+    &--#{$name} {
+      background: linear-gradient(to bottom, #{$value} 0%, $color-white 100%);
+    }
   }
+  // Usage: 
+  // .footer--green
+  // .footer--cyan
+  // .footer--yellow
+  // .footer--magenta
 }
 .footer__section {
   @include grid-media($layout-grid-wide) {
