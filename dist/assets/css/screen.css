@@ -946,6 +946,16 @@ blockquote {
         width: calc(100% - 40px);
         float: left;
         margin-left: 20px; } }
+    @media (min-width: 900px) {
+      .container__section--fullwidth {
+        width: calc(100% - 40px);
+        float: left;
+        margin-left: 20px; } }
+    @media (min-width: 676px) and (max-width: 899px) {
+      .container__section--fullwidth {
+        width: calc(100% - 40px);
+        float: left;
+        margin-left: 20px; } }
 
 .container img {
   width: 100%;

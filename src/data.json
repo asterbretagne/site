@@ -7,7 +7,7 @@
     }, {
       "name": "nos-actions",
       "label": "Nos&nbsp;actions",
-      "color": "yellow"
+      "color": "cyan"
     }, {
       "name": "actualites",
       "label": "Actualités",
@@ -15,7 +15,7 @@
     }, {
       "name": "notre-approche",
       "label": "Notre&nbsp;approche",
-      "color": "cyan"
+      "color": "yellow"
     }, {
       "name": "l-association",
       "label": "L'association",

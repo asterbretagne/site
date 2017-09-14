@@ -157,6 +157,14 @@ blockquote {
       @include grid-column(1, $content-grid-small);
     }
     padding-top: modular-scale(3);
+    &--fullwidth {
+      @include grid-media($content-grid-wide) {
+        @include grid-column(12, $content-grid-wide);
+      }
+      @include grid-media($content-grid-medium) {
+        @include grid-column(12, $content-grid-medium);
+      }
+    }
   }
 }
 .container img {
