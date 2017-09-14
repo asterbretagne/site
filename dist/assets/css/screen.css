@@ -880,7 +880,8 @@ blockquote {
     .navbar {
       display: block;
       float: none;
-      margin: 1.5996em auto; } }
+      margin: 1.5996em auto;
+      margin-left: 20px; } }
   .navbar__item {
     display: block;
     float: left;
@@ -907,24 +908,24 @@ blockquote {
     width: 100%; }
 
 .container {
-  background: -webkit-gradient(linear, left top, left bottom, from(lime), color-stop(65%, white));
-  background: linear-gradient(to bottom, lime 0%, white 65%); }
+  background: -webkit-gradient(linear, left top, left bottom, from(lime), color-stop(45%, white));
+  background: linear-gradient(to bottom, lime 0%, white 45%); }
   .container::after {
     clear: both;
     content: "";
     display: block; }
   .container--green {
-    background: -webkit-gradient(linear, left top, left bottom, from(lime), color-stop(65%, white));
-    background: linear-gradient(to bottom, lime 0%, white 65%); }
+    background: -webkit-gradient(linear, left top, left bottom, from(lime), color-stop(45%, white));
+    background: linear-gradient(to bottom, lime 0%, white 45%); }
   .container--cyan {
-    background: -webkit-gradient(linear, left top, left bottom, from(cyan), color-stop(65%, white));
-    background: linear-gradient(to bottom, cyan 0%, white 65%); }
+    background: -webkit-gradient(linear, left top, left bottom, from(cyan), color-stop(45%, white));
+    background: linear-gradient(to bottom, cyan 0%, white 45%); }
   .container--yellow {
-    background: -webkit-gradient(linear, left top, left bottom, from(#fbb812), color-stop(65%, white));
-    background: linear-gradient(to bottom, #fbb812 0%, white 65%); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbb812), color-stop(45%, white));
+    background: linear-gradient(to bottom, #fbb812 0%, white 45%); }
   .container--magenta {
-    background: -webkit-gradient(linear, left top, left bottom, from(#ed6ca5), color-stop(65%, white));
-    background: linear-gradient(to bottom, #ed6ca5 0%, white 65%); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed6ca5), color-stop(45%, white));
+    background: linear-gradient(to bottom, #ed6ca5 0%, white 45%); }
   .container--main {
     min-height: 50rem; }
   .container__section {
@@ -968,6 +969,7 @@ blockquote {
 
 .footer {
   min-height: 25em;
+  margin-top: 2.84231em;
   background: -webkit-gradient(linear, left top, left bottom, from(lime), to(white));
   background: linear-gradient(to bottom, lime 0%, white 100%); }
   .footer::after {

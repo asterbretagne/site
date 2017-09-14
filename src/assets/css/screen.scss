@@ -93,6 +93,7 @@ blockquote {
     display: block;
     float: none;
     margin: modular-scale(1) auto;
+    margin-left: 20px;
   }
 
   &__item {
@@ -128,10 +129,10 @@ blockquote {
 
 .container {
   @include grid-container;
-  background: linear-gradient(to bottom, $color-green 0%, $color-white 65%);
+  background: linear-gradient(to bottom, $color-green 0%, $color-white 45%);
   @each $name, $value in $flashy-backgrounds {
     &--#{$name} {
-      background: linear-gradient(to bottom, #{$value} 0%, $color-white 65%);
+      background: linear-gradient(to bottom, #{$value} 0%, $color-white 45%);
     }
   }
   // Usage: 
@@ -190,6 +191,7 @@ blockquote {
 .footer {
   @include grid-container;
   min-height: 25em;
+  margin-top: modular-scale(3);
   background: linear-gradient(to bottom, $color-green 0%, $color-white 100%);
   @each $name, $value in $flashy-backgrounds {
     &--#{$name} {
