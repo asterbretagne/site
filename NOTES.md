@@ -16,3 +16,10 @@ I prefer Nunjuncks over Handlebars, Twig, Mustach…
 - [gulp-responsive](https://github.com/mahnunchik/gulp-responsive) et [gulp-responsive-config example](https://github.com/mahnunchik/gulp-responsive/blob/master/examples/gulp-responsive-config.md)
 - Avec gulp-image-resize : <https://stackoverflow.com/questions/35801807/gulp-image-resize-to-generate-multiple-output-sizes>
 -  Peut-être utile [gulp-sugar-srcset](https://github.com/Tsuguya/gulp-sugar-srcset)
+
+
+## Déploiement sur github pages
+
+- Utiliser [gulp-gh-pages](https://github.com/shinnn/gulp-gh-pages)
+
+
