@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp, sass, postcss, autoprefixer, bourbon, neat, browserSync, imagemin, minify, 
-    nunjucksRender, fs, data, js_src, js_dist;
+    nunjucksRender, fs, data, ghPages, js_src, js_dist;
 
 gulp           = require("gulp");
 sass           = require("gulp-sass");
@@ -15,6 +15,7 @@ minify         = require('gulp-minify');
 nunjucksRender = require('gulp-nunjucks-render');
 fs             = require('fs');
 data           = require('gulp-data');
+ghPages        = require('gulp-gh-pages');
 
 js_src  = './src/assets/js';
 js_dist = './dist/assets/js';
@@ -85,6 +86,14 @@ gulp.task("html", function() {
 //    }))
 //    .pipe(gulp.dest(js_dist));
 //});
+//
+
+
+// Deploy on github pages in the gh-pages branch
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 // Spin up a server
 gulp.task("browserSync", function() {
