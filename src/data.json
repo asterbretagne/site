@@ -23,9 +23,9 @@
     }
   ], "extra-pages": [
     {
-      "name": "je-participe",
+      "name": "contact",
       "label": "Je participe",
-      "color": "green"
+      "color": "yellow"
     }, {
       "name": "contact",
       "label": "Contactez-nous",
