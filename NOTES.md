@@ -23,3 +23,30 @@ I prefer Nunjuncks over Handlebars, Twig, Mustach…
 - Utiliser [gulp-gh-pages](https://github.com/shinnn/gulp-gh-pages)
 
 
+## Contenus
+
+### Nos actions
+
+- prévoir texte d'introduction
+- carte : changer le thème (cf page d'accueil)
+- suivi de "Découvrez sur la carte ci-dessous tous nos projets"
+- après la carte "Vous avez un projet ? N'hésitez pas à nous contacter"
+
+### Notre approche
+
+- texte à revoir: trop abstrait, commencer par des explications plus concrètes
+- une image principale
+- des images secondaires
+
+
+### L'association
+
+C'est le "Qui sommes-nous ?"
+
+Historique
+Équipe
+
+### Contact
+
+Soyez sympathiques et donnez envie ;-)
+

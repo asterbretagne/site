@@ -9,10 +9,6 @@
       "label": "Nos&nbsp;actions",
       "color": "cyan"
     }, {
-      "name": "actualites",
-      "label": "Actualités",
-      "color": "magenta"
-    }, {
       "name": "notre-approche",
       "label": "Notre&nbsp;approche",
       "color": "yellow"
