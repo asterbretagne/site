@@ -46,7 +46,13 @@ gulp.task("img", function() {
 // Copy fonts
 gulp.task('fonts', function() {
     gulp.src("src/assets/fonts/**/*.*")
-          .pipe(gulp.dest("dist/assets/fonts"))
+        .pipe(gulp.dest("dist/assets/fonts"))
+});
+
+// Copy favicons
+gulp.task('icons', function() {
+    gulp.src("src/assets/icons/**/*.*")
+        .pipe(gulp.dest("dist/assets/icons"))
 });
 
 // Prepare HTML files
@@ -106,10 +112,11 @@ gulp.task("browserSync", function() {
 });
 
 // Live reload anytime a file changes
-gulp.task("watch", ["browserSync", "html", "sass", "fonts", "img"], function() {
+gulp.task("watch", ["browserSync", "html", "sass", "fonts", "icons", "img"], function() {
     gulp.watch("src/**/*.html", ["html"]);
     gulp.watch("src/assets/css/**/*.scss", ["sass"]);
     gulp.watch("src/assets/fonts/**/*.*", ["fonts"]);
+    gulp.watch("src/assets/icons/**/*.*", ["icons"]);
     gulp.watch("src/assets/img/**/*.*", ["img"]);
     // gulp.watch(js_src + '/*.js', ["jsmin"]);
     gulp.watch("dist/**/*.html").on("change", browserSync.reload);
@@ -117,4 +124,4 @@ gulp.task("watch", ["browserSync", "html", "sass", "fonts", "img"], function() {
 
 // Compiles all gulp tasks
 // gulp.task("default", ["sass", "img", "fonts", "html", "slim", "jsmin"]);
-gulp.task("default", ["html", "sass", "img", "fonts"]);
+gulp.task("default", ["html", "sass", "img", "fonts", "icons"]);
