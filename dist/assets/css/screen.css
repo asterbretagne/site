@@ -846,9 +846,9 @@ blockquote {
   text-indent: -2ex;
   font-style: italic; }
   blockquote::before {
-    content: '«'; }
+    content: '« '; }
   blockquote::after {
-    content: '»'; }
+    content: ' »'; }
 
 /*================== LAYOUT ==========================*/
 .wrapper {
