@@ -3,25 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "Gulpfile.js",
-  "browserlist": [
+  "browserslist": [
     "last 4 versions"
   ],
   "dependencies": {
-    "gulp": "^3.9.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.3",
-    "browser-sync": "^2.18.8",
-    "gulp-data": "^1.2.1",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-minify": "^1.0.0",
-    "gulp-nunjucks-render": "^2.2.1",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0",
+    "autoprefixer": "^8.5.0",
+    "browser-sync": "^2.24.4",
+    "gulp-data": "^1.3.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-postcss": "^7.0.1",
     "node-bourbon": "^4.2.8",
     "node-neat": "^2.0.0-beta.0",
     "normalize-scss": "^6.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-sass": "^4.0.1",
+    "util-deprecate": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
