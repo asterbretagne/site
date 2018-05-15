@@ -24,6 +24,8 @@ html {
 body {
   font-family: 'Roboto Mono', monospace;
   font-weight: $font-weight-light;
+	background-color: $color-smoke;
+  background-image: url($bg-svg-default);
 }
 
 // Elements
@@ -62,11 +64,13 @@ blockquote {
   position: relative;
   margin: 0 auto;
   max-width: 960px;
+	background-color: $color-white;
 }
 
 
 .header {
   margin-bottom: modular-scale(1);
+padding-top: 1em;
 }
 
 .logo {
