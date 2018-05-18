@@ -6,9 +6,10 @@ TODO
 - ajout pages mentions légales / crédits
 - ajout twitter card
 - ajout fb open graph
+- fixer pb avec gulp-gh-pages (ou créer mon propre script)
+- prepa hébergement
 - Tester avec une image de taille différente ?
 - Dans tous les cas, convertir les images aux bonnes dimensions + srcset 2x, 3x …
-- prepa hébergement
 
 
 Done
