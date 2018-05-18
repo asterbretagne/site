@@ -3,28 +3,39 @@
     {
       "name": "index",
       "label": "Accueil",
+      "description": "ASTER Bretagne : nous partageons notre savoir-faire dans le domaine de la construction et de l’infrastructure à travers le monde pour des missions ciblées à but humanitaire.",
       "color": "green"
     }, {
       "name": "nos-actions",
       "label": "Nos&nbsp;actions",
+      "description": "À propos des actions d'ASTER Bretagne : découvrez tous nos projets",
       "color": "cyan"
     }, {
       "name": "notre-approche",
       "label": "Notre&nbsp;approche",
+      "description": "ASTER Bretagne : tout savoir sur notre approche",
       "color": "yellow"
     }, {
       "name": "l-association",
       "label": "L'association",
+      "description": "ASTER Bretagne : mieux connaître notre association",
       "color": "green"
+    }, {
+      "name": "contact",
+      "label": "Contact",
+      "description": "ASTER Bretagne : nous contacter pour en savoir plus, devenir mécène, participer ou échanger sur votre projet",
+      "color": "magenta"
     }
   ], "extra-pages": [
     {
       "name": "contact",
       "label": "Je participe",
+      "description": "ASTER Bretagne : nous contacter pour en savoir plus, devenir mécène, participer ou échanger sur votre projet",
       "color": "yellow"
     }, {
       "name": "contact",
       "label": "Contactez-nous",
+      "description": "ASTER Bretagne : nous contacter pour en savoir plus, devenir mécène, participer ou échanger sur votre projet",
       "color": "yellow"
     }
   ]

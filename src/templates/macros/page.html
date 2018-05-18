@@ -9,3 +9,8 @@
     {{pages | findbyattr('name', currentPage) | getvalue('label') | safe}} | Architectes Sans Territoire Bretagne
   {%- endif -%}
 {%- endmacro %}
+
+
+{% macro description(pages, currentPage='index') -%}
+{{pages | findbyattr('name', currentPage) | getvalue('description')}}
+{%- endmacro %}

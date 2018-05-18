@@ -1,7 +1,6 @@
 TODO
 ====
 
-- contenus page contact
 - ajout meta description pour chaque page
 - ajout pages mentions légales / crédits
 - ajout twitter card
@@ -15,6 +14,7 @@ TODO
 Done
 ----
 
+x contenus page contact
 x ajout favicon
 x Finitions design: cf. Maquettes/Capture d’écran 2017-11-07 à 17.52.05-fullpage.png
 x Tester un pattern SVG pour l'arrière plan (<http://www.heropatterns.com/>)
